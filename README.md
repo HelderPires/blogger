@@ -4,12 +4,13 @@
 
 <h2>Pre -requisites</h2>
 <h3>Mongo DB - Download Link: https://www.mongodb.com/download-center#enterprise</h3>
-<h3>//NodeJS - Download Link:https://nodejs.org/en/download/</h3>
+<h3>NodeJS - Download Link:https://nodejs.org/en/download/</h3>
 
 <h2>Deploying App<h2>
 <h4>1 - Pull or Clone the git repository</h4>
 <h4>2 - Deploy DB:  mongorestore --db blogdb  [path to your mongo data directory]</h4>
- <h5> 2.1 - Verify DB : - lauch mongo : cmd -> 'mongod'</h5>
+ <h4> 2.1 - Verify DB :</h4>
+ <h5>                   - lauch mongo : cmd -> 'mongod'</h5>
  <h5>                   - access mongo : cmd -> 'mongo' -> on mongo console : show dbs (check for blogdb)</h5>
  <h5>                   - verify collections : mongo console -> use blogdb -> show collections (check for Posts collection)</h5>
 <h4>3 - Install dependencies : on the webapp root (/blogger) run 'npm install'</h4>
