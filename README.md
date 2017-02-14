@@ -1,4 +1,5 @@
 # blogger 
+<!--
 A simple 1 user blog MEAN stack application
 
 Deployment instructions
@@ -16,3 +17,4 @@ NodeJS - Download Link:https://nodejs.org/en/download/
 3 - Install dependencies : on the webapp root (/blogger) run 'npm install'
 4 - Launch App : run 'node server.js'
 5 - Access page : on your browser Go to : 'http://127.0.0.1:8080/'
+-->
