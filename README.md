@@ -1,19 +1,17 @@
 # blogger 
+<h1>A simple 1 user blog MEAN stack application</h1>
+<h2>Deployment instructions<h2>
 
-//A simple 1 user blog MEAN stack application
+<h2>Pre -requisites</h2>
+<h3>Mongo DB - Download Link: https://www.mongodb.com/download-center#enterprise</h3>
+<h3>//NodeJS - Download Link:https://nodejs.org/en/download/</h3>
 
-//Deployment instructions
-
-// Pre -requisites
-//Mongo DB - Download Link: https://www.mongodb.com/download-center#enterprise
-//NodeJS - Download Link:https://nodejs.org/en/download/
-
-// Deploying App
-//1 - Pull or Clone the git repository
-//2 - Deploy DB:  mongorestore --db blogdb  [path to your mongo data directory]
- // 2.1 - Verify DB : - lauch mongo : cmd -> 'mongod'
- //                   - access mongo : cmd -> 'mongo' -> on mongo console : show dbs (check for blogdb)
- //                   - verify collections : mongo console -> use blogdb -> show collections (check for Posts collection)
-//3 - Install dependencies : on the webapp root (/blogger) run 'npm install'
-//4 - Launch App : run 'node server.js'
-//5 - Access page : on your browser Go to : 'http://127.0.0.1:8080/'
+<h2>Deploying App<h2>
+<h4>1 - Pull or Clone the git repository</h4>
+<h4>2 - Deploy DB:  mongorestore --db blogdb  [path to your mongo data directory]</h4>
+ <h5> 2.1 - Verify DB : - lauch mongo : cmd -> 'mongod'</h5>
+ <h5>                   - access mongo : cmd -> 'mongo' -> on mongo console : show dbs (check for blogdb)</h5>
+ <h5>                   - verify collections : mongo console -> use blogdb -> show collections (check for Posts collection)</h5>
+<h4>3 - Install dependencies : on the webapp root (/blogger) run 'npm install'</h4>
+<h4>4 - Launch App : run 'node server.js'</h4>
+<h4>5 - Access page : on your browser Go to : 'http://127.0.0.1:8080/'</h4>
