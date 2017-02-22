@@ -1,0 +1,12 @@
+Code improvement and consolidation:
+
+Breaking main.js into services.js and controllers, using a core file to inject all modules
+Moving to a component based architecture and break out html code from index.js
+Move to a remote DB
+Improve overall presentation and break out CSS code
+
+Next features:
+
+Implementing multi-user and subsequent 'Users' collection on mongo
+Implementing authentication with Passport.js - Including login strategies for OAuth , facebook, google+ and twitter
+Implementing multi-media support on posts

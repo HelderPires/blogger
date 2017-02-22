@@ -1,98 +1,33 @@
 <!doctype html>
-
-<!-- ASSIGN OUR ANGULAR MODULE -->
-<html data-ng-app="blogger">
+<html>
 <head>
-    <!-- META -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Landing Page</title>
+	<!-- 
+	<link rel="stylesheet" type="text/css" href="../node_modules/font-awesome/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+	<script src="../node_modules/bootstrap/"></script>
+	<script src="../node_modules/angular/angular.js"></script>
+	<script src="../node_modules/angular-ui-router.js"></script>
+ --><link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
 
-    <title>Node/Angular Sample Blog</title>
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+ 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+	
+	<script src="controllers/authCtrl.js"></script>
+	<script src="controllers/postCtrl.js"></script>
+    <script src="core.js"></script>
     
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
     <style>
-        html                    { overflow-y:scroll; }
-        body                    { padding-top:50px; }
-        #post-list              { margin-bottom:30px; }
-        #input-form				{ width:70%;
-        						  position: relative;
-								  left:15%;
-								  right:15%;
-								 }
+    	body	{padding-top:80px}
     </style>
-
-    <!--CDNs-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- register app modules -->
-	<script src="main.js"></script>
-    
-
 </head>
-<!-- SET THE CONTROLLER & FETCH POSTS -->
-<body data-ng-controller="mainController">
-         <!-- HEADER AND POST COUNT -->
-        <div class="jumbotron text-center">
-            <h1> JUST POST IT <span class="label label-info">{{ posts.length }}</span></h1>
-        </div>
-        <!-- POST LIST -->
-		<div id="post-list" class="row">
-		    <div class="col-sm-4 col-sm-offset-4">		
-		        <!-- LOOP OVER THE POSTS IN $scope.posts -->
-		     	<div class="container"> 
-		     		<div class="panel-default" data-ng-repeat="post in posts">
-			      		<div class="panel-heading" ><h3>Title:  {{ post.title }} </h3></div>
-			            <div class="panel-body">
-			               	<p> {{ post.body }}</p>
-			               	<h5>Posted on: {{ post.publishDate }} </h5>
-						</div>
-			            <div>             	                 
-			                <label> 
-			                   	<button type="button" class="btn btn-warning btn-sm" data-ng-click="deletePost(post._id)">Delete</button>
-			  					<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal">Edit</button>
-							</label>
-							<div class="modal fade" id="editModal" role="dialog">
-							    <div class="modal-dialog">
-							      <div class="modal-content">
-							        <div class="modal-header">
-							          	<button type="button" class="close" data-dismiss="modal">&times;</button>
-							          	<h4 class="modal-title">Post Title</h4>
-							        	<input type="text" class="form-control input-lg text-center" placeholder="An awesome title makes the book" data-ng-model="formData.title">
-							        </div>
-							        <div class="modal-body">
-							        	<p>Post content</p>
-										<input type="text" class="form-control input-lg text-center" placeholder="Content is overated" data-ng-model="formData.body">
-                        			</div>
-							        <div class="modal-footer" >
-							          	<button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
-							          	<button type="button" class="btn btn-info" data-dismiss="modal" data-ng-click="updatePost(post._id)">edit</button>
-							        </div>
-							      </div>							      
-							    </div> 
-							</div>
-						</div>
-					</div>
-		       </div>	
-		</div>		     
-        <div id="post-form" class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center">
-                <form>
-                    <div class="form-group"  id="input-form">
-                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-                        <input type="text" class="form-control input-lg text-center" placeholder="An awesome title makes the book" data-ng-model="formData.title">
-                        <b></b>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Content is overated" data-ng-model="formData.body">                        
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-lg" data-ng-click="createPost()">Submit</button> 					                   
-                </form>
-            </div>
-        </div>
-
-    </div>
+<body data-ng-app="blogger">
+	<div>
+		<div data-ui-view></div>
+	</div>
 </body>
 </html>
-		  
-							  
-								  
-								  
