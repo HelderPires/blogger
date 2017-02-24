@@ -54,23 +54,3 @@ module.exports = function(app){
 	//VIEWS
 	app.get('', function(req, res) {res.sendFile('./public/index.html', {root: __dirname});});
 };
-/*
-app.post('/api/posts/update/:post_id', function(req, res) {
-Post.findOneAndUpdate({ 
-	_id: req.params.post_id
-	}, {
-	title: req.body.title,
-	body : req.body.body,
-    publishDate: req.body.publishDate	
-}, function(err, post) { 
-	if (err) res.send(err);
-	
-	//refresh
-	Post.find(function(err, posts) {
-        if (err) res.send(err)
-        res.json(posts);
-        console.log('req.params.post_id   ' + req.params.post_id);
-    });
-});
-});
-*/
