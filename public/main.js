@@ -1,8 +1,8 @@
 var blogger = angular.module('blogger', [])
 .controller('mainController', ['$scope', '$http', function($scope, $http) {
     //initialize formData
-	$scope.formData = {};
-	// when landing on the page, get all posts and show them
+    $scope.formData = {};
+    // when landing on the page, get all posts and show them
     $http.get('/api/posts')
         .success(function(data) {
             $scope.posts = data;
