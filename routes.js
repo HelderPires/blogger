@@ -15,13 +15,13 @@ module.exports = function(app){
 		Post.create({
 			title: req.body.title,
 			body : req.body.body,
-	        publishDate: req.body.publishDate
-	    }, function(err, post) { 
-	    	if (err) res.send(err);
-	    	//refresh
-	    	Post.find(function(err, posts) {
-	            if (err) res.send(err)
-	            res.json(posts);
+	       	 	publishDate: req.body.publishDate
+	    	}, function(err, post) { 
+			if (err) res.send(err);
+			//refresh
+			Post.find(function(err, posts) {
+			    if (err) res.send(err)
+			    res.json(posts);
 	        });
 	    });
 	
